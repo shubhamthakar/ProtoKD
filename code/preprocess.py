@@ -32,7 +32,7 @@ def zscore_nonzero(img):
 
 
 
-path = '../../Dataset/BraTS2018/brats2018' #change this if need
+path = '../Dataset/training/' #change this if need
 outputs = '../data/brats2018/' 
 if not os.path.exists(outputs):
     os.makedirs(outputs)

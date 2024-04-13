@@ -77,13 +77,13 @@ def main():
     model.train()
     model.cuda()
     start_epoch = 0
-    if args.resume:
-        ckpt = torch.load(args.ckpt_path)
-        start_epoch = ckpt['epoch'] + 1
-        model.load_state_dict(ckpt['state_dict'])
-        optimizer.load_state_dict(ckpt['optimizer'])
-        best_dice = ckpt['best_dice']
-        best_epoch = ckpt['best_epoch']
+    # if args.resume:
+    #     ckpt = torch.load(args.ckpt_path)
+    #     start_epoch = ckpt['epoch'] + 1
+    #     model.load_state_dict(ckpt['state_dict'])
+    #     optimizer.load_state_dict(ckpt['optimizer'])
+    #     best_dice = ckpt['best_dice']
+    #     best_epoch = ckpt['best_epoch']
     #dataset
     train_dataset = BraTS(args.data_dir,crop_size=CROP_SIZE)
     print('Training set includes %d data.' % len(train_dataset))
